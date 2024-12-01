@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
+
 
 export interface Post {
   content: string;
   image: string | null;
 }
 
-
 const App: React.FC = () => {
+  
   const [connected, setConnected] = useState<boolean>(false);
   const [posts, setPosts] = useState<Post[]>([]);
+
+  // Update connection status whenever user state changes
 
   const addPost = (post: Post) => {
     setPosts([post, ...posts]);
