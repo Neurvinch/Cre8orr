@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {ConnectButton} from '@rainbow-me/rainbowkit';
+import Connect from './Connect';
 
 interface HeaderProps {
   onConnect: () => void;
@@ -14,7 +15,7 @@ const Header: React.FC<HeaderProps> = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-semibold text-gray-800">Web3 Social</h1>
         
-        <ConnectButton />
+        <Connect />
      
       </div>
     </header>
